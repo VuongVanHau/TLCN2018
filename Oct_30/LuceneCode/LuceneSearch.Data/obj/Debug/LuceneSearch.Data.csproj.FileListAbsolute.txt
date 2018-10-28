@@ -1,0 +1,6 @@
+C:\Users\John\Documents\Lucene.Net-search-MVC-sample-site-master\LuceneSearch.Data\bin\Debug\LuceneSearch.Data.dll
+C:\Users\John\Documents\Lucene.Net-search-MVC-sample-site-master\LuceneSearch.Data\bin\Debug\LuceneSearch.Data.pdb
+C:\Users\John\Documents\Lucene.Net-search-MVC-sample-site-master\LuceneSearch.Data\obj\Debug\LuceneSearch.Data.csprojAssemblyReference.cache
+C:\Users\John\Documents\Lucene.Net-search-MVC-sample-site-master\LuceneSearch.Data\obj\Debug\LuceneSearch.Data.csproj.CoreCompileInputs.cache
+C:\Users\John\Documents\Lucene.Net-search-MVC-sample-site-master\LuceneSearch.Data\obj\Debug\LuceneSearch.Data.dll
+C:\Users\John\Documents\Lucene.Net-search-MVC-sample-site-master\LuceneSearch.Data\obj\Debug\LuceneSearch.Data.pdb

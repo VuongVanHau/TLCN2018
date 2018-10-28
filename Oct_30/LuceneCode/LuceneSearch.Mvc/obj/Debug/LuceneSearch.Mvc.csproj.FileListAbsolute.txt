@@ -1,0 +1,2 @@
+C:\Users\John\Documents\Lucene.Net-search-MVC-sample-site-master\LuceneSearch.Mvc\obj\Debug\LuceneSearch.Mvc.csprojAssemblyReference.cache
+C:\Users\John\Documents\Lucene.Net-search-MVC-sample-site-master\LuceneSearch.Mvc\obj\Debug\LuceneSearch.Mvc.csproj.CoreCompileInputs.cache

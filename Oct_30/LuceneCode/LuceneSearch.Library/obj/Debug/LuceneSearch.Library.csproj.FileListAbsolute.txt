@@ -1,0 +1,13 @@
+C:\Users\John\Documents\Lucene.Net-search-MVC-sample-site-master\LuceneSearch.Library\bin\Debug\LuceneSearch.dll
+C:\Users\John\Documents\Lucene.Net-search-MVC-sample-site-master\LuceneSearch.Library\bin\Debug\LuceneSearch.pdb
+C:\Users\John\Documents\Lucene.Net-search-MVC-sample-site-master\LuceneSearch.Library\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\John\Documents\Lucene.Net-search-MVC-sample-site-master\LuceneSearch.Library\bin\Debug\Lucene.Net.dll
+C:\Users\John\Documents\Lucene.Net-search-MVC-sample-site-master\LuceneSearch.Library\bin\Debug\LuceneSearch.Data.dll
+C:\Users\John\Documents\Lucene.Net-search-MVC-sample-site-master\LuceneSearch.Library\bin\Debug\LuceneSearch.Data.pdb
+C:\Users\John\Documents\Lucene.Net-search-MVC-sample-site-master\LuceneSearch.Library\bin\Debug\Lucene.Net.pdb
+C:\Users\John\Documents\Lucene.Net-search-MVC-sample-site-master\LuceneSearch.Library\bin\Debug\Lucene.Net.xml
+C:\Users\John\Documents\Lucene.Net-search-MVC-sample-site-master\LuceneSearch.Library\obj\Debug\LuceneSearch.Library.csprojAssemblyReference.cache
+C:\Users\John\Documents\Lucene.Net-search-MVC-sample-site-master\LuceneSearch.Library\obj\Debug\LuceneSearch.Library.csproj.CoreCompileInputs.cache
+C:\Users\John\Documents\Lucene.Net-search-MVC-sample-site-master\LuceneSearch.Library\obj\Debug\LuceneSearch.Library.csproj.CopyComplete
+C:\Users\John\Documents\Lucene.Net-search-MVC-sample-site-master\LuceneSearch.Library\obj\Debug\LuceneSearch.dll
+C:\Users\John\Documents\Lucene.Net-search-MVC-sample-site-master\LuceneSearch.Library\obj\Debug\LuceneSearch.pdb
