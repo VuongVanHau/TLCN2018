@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MenShoeModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="MenShoeModelStoreContainer">
+    <EntitySet Name="Categories" EntityType="MenShoeModel.Store.Categories" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Colors" EntityType="MenShoeModel.Store.Colors" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Customers" EntityType="MenShoeModel.Store.Customers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Orders" EntityType="MenShoeModel.Store.Orders" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OrderDetails" EntityType="MenShoeModel.Store.OrderDetails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Product_Color" EntityType="MenShoeModel.Store.Product_Color" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Product_Size" EntityType="MenShoeModel.Store.Product_Size" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductCategories" EntityType="MenShoeModel.Store.ProductCategories" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductImages" EntityType="MenShoeModel.Store.ProductImages" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sizes" EntityType="MenShoeModel.Store.Sizes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="MenShoeModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="MenShoeModel.Store.Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Products" EntityType="MenShoeModel.Store.Products" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Product_Color_Colors" Association="MenShoeModel.Store.FK_Product_Color_Colors">
+      <End Role="Colors" EntitySet="Colors" />
+      <End Role="Product_Color" EntitySet="Product_Color" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Size_Sizes" Association="MenShoeModel.Store.FK_Product_Size_Sizes">
+      <End Role="Sizes" EntitySet="Sizes" />
+      <End Role="Product_Size" EntitySet="Product_Size" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Category" Association="MenShoeModel.Store.FK_Product_Category">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_ProductCategory" Association="MenShoeModel.Store.FK_Product_ProductCategory">
+      <End Role="ProductCategory" EntitySet="ProductCategories" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="true" MaxLength="250" />
+    <Property Name="MetaTitle" Type="varchar" Nullable="true" MaxLength="250" />
+    <Property Name="SeoTitle" Type="nvarchar" Nullable="true" MaxLength="250" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="true" />
+    <Property Name="CreatedBy" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="true" />
+    <Property Name="ModifiedBy" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="MetaKeywords" Type="nvarchar" Nullable="true" MaxLength="250" />
+    <Property Name="MetaDescriptions" Type="nchar" Nullable="true" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Colors">
+    <Key>
+      <PropertyRef Name="ColorID" />
+    </Key>
+    <Property Name="ColorID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameColor" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="true" />
+    <Property Name="CreatedBy" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="true" />
+    <Property Name="ModifiedBy" Type="varchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" Nullable="true" MaxLength="30" />
+    <Property Name="Password" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" Nullable="true" MaxLength="250" />
+    <Property Name="Mobile" Type="nvarchar" Nullable="true" MaxLength="11" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="true" />
+    <Property Name="CreatedBy" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="true" />
+    <Property Name="ModifiedBy" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Status" Type="bit" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="true" />
+    <Property Name="CustomerID" Type="bigint" Nullable="true" />
+    <Property Name="ShipName" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ShipMobile" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="ShipAdress" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ShipEmail" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Status" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="OrderDetails">
+    <Key>
+      <PropertyRef Name="ProductID" />
+      <PropertyRef Name="OrderID" />
+      <PropertyRef Name="ColorID" />
+      <PropertyRef Name="SizeID" />
+    </Key>
+    <Property Name="ProductID" Type="bigint" Nullable="false" />
+    <Property Name="OrderID" Type="bigint" Nullable="false" />
+    <Property Name="ColorID" Type="bigint" Nullable="false" />
+    <Property Name="SizeID" Type="bigint" Nullable="false" />
+    <Property Name="Quanlity" Type="int" Nullable="true" />
+    <Property Name="Price" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="Product_Color">
+    <Key>
+      <PropertyRef Name="ProductColorID" />
+    </Key>
+    <Property Name="ProductColorID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ColorID" Type="bigint" Nullable="true" />
+    <Property Name="ProductID" Type="bigint" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Product_Size">
+    <Key>
+      <PropertyRef Name="ProductSizeID" />
+    </Key>
+    <Property Name="ProductSizeID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductID" Type="bigint" Nullable="true" />
+    <Property Name="SizeID" Type="bigint" Nullable="true" />
+  </EntityType>
+  <EntityType Name="ProductCategories">
+    <Key>
+      <PropertyRef Name="ProductCategoryID" />
+    </Key>
+    <Property Name="ProductCategoryID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="true" MaxLength="250" />
+    <Property Name="MetaTitle" Type="varchar" Nullable="true" MaxLength="250" />
+    <Property Name="SeoTitle" Type="nvarchar" Nullable="true" MaxLength="250" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="true" />
+    <Property Name="CreatedBy" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="true" />
+    <Property Name="ModifiedBy" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="MetaKeywords" Type="nvarchar" Nullable="true" MaxLength="250" />
+    <Property Name="MetaDescriptions" Type="nchar" Nullable="true" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="ProductImages">
+    <Key>
+      <PropertyRef Name="ProductImageID" />
+    </Key>
+    <Property Name="ProductImageID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ImageDetail" Type="nvarchar" Nullable="true" MaxLength="250" />
+    <Property Name="ProductID" Type="bigint" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Sizes">
+    <Key>
+      <PropertyRef Name="SizeID" />
+    </Key>
+    <Property Name="SizeID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Number" Type="int" Nullable="true" />
+    <Property Name="Details" Type="varchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" Nullable="true" />
+    <Property Name="definition" Type="varbinary(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="UserName" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="Email" Type="nvarchar" Nullable="true" MaxLength="250" />
+    <Property Name="Address" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Mobile" Type="nvarchar" Nullable="true" MaxLength="11" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="true" />
+    <Property Name="CreatedBy" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="true" />
+    <Property Name="ModifiedBy" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Status" Type="bit" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="true" MaxLength="250" />
+    <Property Name="MetaTitle" Type="nvarchar" Nullable="true" MaxLength="250" />
+    <Property Name="Price" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="PromotionPrice" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="Detail" Type="varchar(max)" Nullable="true" />
+    <Property Name="Quantity" Type="int" Nullable="true" />
+    <Property Name="CategoryID" Type="bigint" Nullable="true" />
+    <Property Name="ProductCategoryID" Type="bigint" Nullable="true" />
+    <Property Name="Warranty" Type="int" Nullable="true" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="true" />
+    <Property Name="CreatedBy" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="true" />
+    <Property Name="ModifiedBy" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="New" Type="bit" Nullable="true" />
+    <Property Name="Image" Type="nvarchar" Nullable="true" MaxLength="250" />
+  </EntityType>
+  <Association Name="FK_Product_Color_Colors">
+    <End Role="Colors" Type="MenShoeModel.Store.Colors" Multiplicity="0..1" />
+    <End Role="Product_Color" Type="MenShoeModel.Store.Product_Color" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Colors">
+        <PropertyRef Name="ColorID" />
+      </Principal>
+      <Dependent Role="Product_Color">
+        <PropertyRef Name="ColorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Size_Sizes">
+    <End Role="Sizes" Type="MenShoeModel.Store.Sizes" Multiplicity="0..1" />
+    <End Role="Product_Size" Type="MenShoeModel.Store.Product_Size" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sizes">
+        <PropertyRef Name="SizeID" />
+      </Principal>
+      <Dependent Role="Product_Size">
+        <PropertyRef Name="SizeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Category">
+    <End Role="Category" Type="MenShoeModel.Store.Categories" Multiplicity="0..1" />
+    <End Role="Product" Type="MenShoeModel.Store.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_ProductCategory">
+    <End Role="ProductCategory" Type="MenShoeModel.Store.ProductCategories" Multiplicity="0..1" />
+    <End Role="Product" Type="MenShoeModel.Store.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCategory">
+        <PropertyRef Name="ProductCategoryID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="ProductCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
